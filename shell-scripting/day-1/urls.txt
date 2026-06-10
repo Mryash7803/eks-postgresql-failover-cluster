@@ -1,0 +1,5 @@
+https://api.github.com
+https://www.google.com
+https://example.com
+https://httpbin.org/status/200
+https://httpbin.org/status/503
