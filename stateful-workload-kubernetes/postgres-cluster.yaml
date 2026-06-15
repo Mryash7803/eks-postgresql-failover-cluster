@@ -1,0 +1,23 @@
+apiVersion: acid.zalan.do/v1
+kind: postgresql
+metadata:
+  name: devops-postgres
+  namespace: database
+spec:
+  teamId: "devops"
+  volume:
+    size: 5Gi
+    storageClass: gp3
+
+  numberOfInstances: 3
+
+  users:
+    app_user:
+      - login
+      - createdb
+
+  databases:
+    appdb: app_user
+
+  postgresql:
+    version: "17"
